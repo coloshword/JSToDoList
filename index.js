@@ -1,6 +1,4 @@
-document.getElementById("hello").innerHTML = "Hello";
-
-function func() {
-    document.getElementById("entire").style.backgroundColor = "lightblue";
+function getInput() {
+    var str = document.getElementById("enter").value;
+    alert("Value is " + str);
 }
-
