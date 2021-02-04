@@ -12,14 +12,16 @@
     color: aliceblue
 }
 
-.today p{
+.day {
     position: relative;
     left:2vw;
-    top: 20px;
     font-size: 50px;
+    bottom: 20px;
 }
 
 .hr {
+    position: relative;
+    bottom: 20px;
     border: none;
     border-top: 3px double #333;
     color: #333;
@@ -37,4 +39,24 @@ hr:after {
 
 .todayBox {
     display: flex;
+}
+
+.add {
+    width: 100px;
+    height: 30px;
+    background: none;
+    border: none;
+    color: rgb(245, 245, 245);
+    font-size: 20px;
+    background: rgb(52, 152, 219);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.inputBox {
+    position: relative;
+    left: 70vh;
+    bottom: 9vh;
+    display: flex;
+    flex-direction: column;
 }
