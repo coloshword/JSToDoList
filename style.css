@@ -37,8 +37,12 @@ hr:after {
     top: -13px;
 }
 
-.todayBox {
+.box {
     display: flex;
+}
+
+.todayBox {
+    @extend .box;
 }
 
 .add {
