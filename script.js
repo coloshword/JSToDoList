@@ -34,14 +34,18 @@ addInputs();
 // on click event to add input to html
 function addTask(id) {
     // id is the id of the button, and id+"field" is the id of the corresponding text field
-    let text = document.getElementById(id + "field").value;
+    let input =  document.getElementById(id + "field");
+    let text = input.value;
     //now we have the text, we gotta add it to the correct box:
     let inputBoxesIndex = ["todayBox", "tomorrowBox", "thisWeekBox", "NextWeekBox", "laterBox"];
-    let flexBox = document.querySelector("." + inputBoxesIndex[id]);
-    let h1 = document.createElement("h1");
+    let ol = document.querySelector("." + inputBoxesIndex[id]);
+    let h3 = document.createElement("h3");
     text = document.createTextNode(text);
-    h1.appendChild(text);
-    h1.setAttribute("style", "position: relative; left: 2vw; bottom : 6vh;");
-    flexBox.appendChild(h1);
+    h3.appendChild(text);
+    let li = document.createElement("li");
+    li.appendChild(h3);
+    li.setAttribute("style", "position: relative; left: 2vw; bottom : 6vh;");
+    ol.appendChild(li);
+    input.value = "";
 }
 
